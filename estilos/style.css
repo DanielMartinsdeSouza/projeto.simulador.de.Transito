@@ -1,0 +1,16 @@
+*{
+    font-size: arial;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: center;
+}
+body{
+    background-color: beige;
+
+}
+main{
+    color: black;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 3px 3px 5px black;
+}
