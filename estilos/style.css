@@ -1,0 +1,24 @@
+body{
+    background-color: darkolivegreen;
+    font-size: large;
+}
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    
+}
+h2{
+    color: aliceblue;
+    
+}
+p{
+    color: aliceblue;
+}
+li{
+    color: aliceblue;
+}
+b{
+    text-align: center;
+    color: aliceblue;
+}

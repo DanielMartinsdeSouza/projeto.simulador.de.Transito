@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titulo do documento</title>
+    <title>DETRAN</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <header>
-            <h1>titulo do site</h1>
-        </header>
-        <article>
-            <h2>titulo 001</h2>
-            <p>artigo 01</p>
-        </article>
-        <article>
-            <h2>titulo 002</h2>
-            <p>artigo 002</p>
-         </article>
-    </main>
+   <h1>Sistemas de Multas</h1> 
+   <h2><i>se ultrapassar 80km/h levará multa!</i></h2>
+   <p>velocidade do carro:</p> <input type="number" name="txtvel" id="txtvel"><p>km/h</p>
+   <input type="button" value="verificar" onclick="calcular()">
+   <div id="res">
+    <p> infrações que poderá ocorrer <b>multas</b> ou <b>apreensão do veículo.</b></p>
+    <ul>
+        <li>Dirigir embreagado</li>
+        <li>dirigir sem cinto de segurança</li>
+        <li>dirigir carro sem placa</li>
+        <li>dirigir veículo com documentação atrasada</li>
+        <li>veículos em busca ou apreensão</li>
+    </ul>
+    <b>Para mais informações</b> <a href="https://www.detran.rj.gov.br/" target="_blank" rel="external"><p>Site Detran</p></a>
+   </div>
+   <script>
+     function calcular(){
+        var txtv = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var vel = Number(txtv.value)
+        res.innerHTML= `<p> sua velocidade atual é de <strong>${vel}km/h</strong></p>`
+        if (vel > 80) {
+            res.innerHTML += `<p> Você está <strong>MULTADO</strong></P>`
+        }
+
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+         
+       }
+   </script>
+
 </body>
 </html>
